@@ -14,8 +14,6 @@ export class HomeComponent implements OnInit {
 
   // Logout User
   logOut(){
-    // this.toastr.success('Success', "Logged Out Successfully");
     localStorage.removeItem('userData');
-    // this.router.navigate(['/login']);
   }
 }

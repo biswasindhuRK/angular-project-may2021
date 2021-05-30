@@ -1,9 +1,10 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 
-import { RouterModule, Routes ,Router} from '@angular/router';
+import { Routes, Router} from '@angular/router';
 
 import { ProductListComponent } from '../product/product-list/product-list.component';
+import { ProductDetailsComponent } from '../product/product-details/product-details.component';
 
 @Component({
   selector: 'app-home',
@@ -13,15 +14,9 @@ import { ProductListComponent } from '../product/product-list/product-list.compo
 export class HomeComponent implements OnInit {
   active: string|any;
   constructor(private router: Router) {
-    // Detect route changes for active sidebar menu
     this.router.events.subscribe((val: any) => {
-      // this.routeChanged(val);
-    })
-  }
-
-  routeChanged(val:any) {
-    console.error(`BM:::: ${val}`)
-    this.active = val.url;
+      this.active = val.url;
+    });
   }
 
   ngOnInit(): void {
@@ -29,14 +24,18 @@ export class HomeComponent implements OnInit {
 
   // Logout User
   logOut(){
-    localStorage.removeItem('userData');
+    localStorage.removeItem('products');
+    console.debug('clear localStorage');
   }
 }
 
- // Define and export child routes of HomeComponent
- export const homeChildRoutes : Routes = [
+// Define and export child routes of HomeComponent
+export const homeChildRoutes: Routes = [
   {
     path: '',
     component: ProductListComponent
-  }
-  ];
+  }, {
+    path: 'details/:id',
+    component: ProductDetailsComponent
+  },
+];

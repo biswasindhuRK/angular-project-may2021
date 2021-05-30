@@ -31,7 +31,7 @@ export class AppComponent {
       total_item: 123
     },
     {
-      id: 15678,
+      id: 5678,
       product_name: "Sprite",
       company: "The CocaCola Company",
       quentity: "1L",
@@ -41,7 +41,7 @@ export class AppComponent {
       total_item: 100
     },
     {
-      id: 16789,
+      id: 1357,
       product_name: "Mineral Water",
       company: "Bisleri",
       quentity: "2L",
@@ -51,7 +51,7 @@ export class AppComponent {
       total_item: 40
     },
     {
-      id: 167889,
+      id: 2468,
       product_name: "Mineral Water",
       company: "Bisleri",
       quentity: "1L",
@@ -61,7 +61,7 @@ export class AppComponent {
       total_item: 140
     },
     {
-      id: 7894,
+      id: 123456,
       product_name: "Thumps Up",
       company: "The CocaCola Company",
       quentity: "1L",
@@ -85,5 +85,6 @@ export class AppComponent {
   constructor() {
     // save dammy data into localStorage
     localStorage.setItem('products', JSON.stringify(this.productList));
+    console.debug('Defailed data store to localStorage');
   }
 }

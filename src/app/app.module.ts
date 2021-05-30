@@ -10,6 +10,7 @@ import { ProductService } from './services/product/product.service';
 
 // components
 import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 
 // Router Module
 import { RouterModule, Routes } from '@angular/router';
@@ -30,7 +31,8 @@ const routes : Routes = [
     AppComponent,
     HomeComponent,
 
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

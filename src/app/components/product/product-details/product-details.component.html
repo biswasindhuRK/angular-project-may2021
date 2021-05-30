@@ -1,0 +1,44 @@
+<!-- <p>product-details works!</p> -->
+<div class="w3-container" *ngIf="productDetails">
+    <div class="w3-panel w3-round-small w3-teal">
+		<h3>Product Details</h3>
+    </div>
+	<div class=" w3-card custom-card"><br>
+		<h3 class="text-center">{{productDetails.name}}</h3>
+		<hr>
+		<table class="w3-table w3-bordered">
+			<tr>
+				<td><i class="w3-medium custom-icon fa fa-barcode"></i>Product ID</td>
+				<td>: <b>{{productDetails.id}}</b></td>
+			</tr>
+            <tr>
+				<td><i class="w3-medium custom-icon fa fa-cubes"></i>Product Name</td>
+				<td>: <b>{{productDetails.product_name}}</b></td>
+			</tr>
+			<tr>
+				<td><i class="w3-medium custom-icon fa fa-users"></i>Company Name</td>
+				<td>: <b>{{productDetails.company}}</b></td>
+			</tr>
+            <tr>
+				<td><i class="w3-medium custom-icon fa fa-hourglass-2"></i>Quentity</td>
+				<td>: <b>{{productDetails.quentity}}</b></td>
+			</tr>
+			<tr>
+				<td><i class="w3-medium custom-icon fa fa-calendar-check-o"></i>MFG Date</td>
+				<td>: <b>{{productDetails.mfg_date}}</b></td>
+			</tr>
+			<tr>
+				<td><i class="w3-medium custom-icon fa fa-calendar-times-o"></i>EXP Date</td>
+				<td>: <b>{{productDetails.exp_date}}</b></td>
+			</tr>
+            <tr>
+				<td><i class="w3-medium custom-icon fa fa-shopping-cart"></i>Total Units</td>
+				<td>: <b>{{productDetails.total_item}}</b></td>
+			</tr>
+            <tr>
+				<td><i class="w3-medium custom-icon fa fa-rupee"></i>Price/Unit</td>
+				<td>: <b>{{productDetails.price}}</b></td>
+			</tr>
+		</table>
+	</div>
+</div>

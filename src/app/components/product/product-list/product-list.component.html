@@ -1,0 +1,25 @@
+<!-- <p>product-list works!</p> -->
+<div class="w3-container" *ngIf="allProductsData">
+	<div class="w3-panel w3-light-grey w3-padding-16 w3-card-2" *ngIf="allProductsData.length != 0">
+		<table class="w3-table w3-striped w3-bordered">
+			<tr> <!--icons: https://www.w3schools.com/icons/fontawesome_icons_intro.asp-->
+				<th><i class="w3-medium custom-icon fa fa-barcode"></i>ID</th>
+				<th><i class="w3-medium custom-icon fa fa-cubes"></i>Product Name</th>
+				<th><i class="w3-medium custom-icon fa fa-users"></i>Company</th>
+				<th><i class="w3-medium custom-icon fa fa-sort-numeric-asc"></i>Quentity</th>
+				<th><i class="w3-medium custom-icon fa fa-calendar-check-o"></i>MFG Date</th>
+                <th><i class="w3-medium custom-icon fa fa-calendar-times-o"></i>EXP Date</th>
+                <th><i class="w3-medium custom-icon fa fa-rupee"></i>Price</th>
+			</tr>
+			<tr *ngFor="let product of allProductsData">
+				<td class="pointer">{{product.id}} </td>
+				<td class="pointer">{{product.product_name}}</td>
+				<td class="pointer">{{product.company}}</td>
+				<td class="pointer">{{product.quentity}}</td>
+				<td class="pointer">{{product.mfg_date}}</td>
+				<td class="pointer">{{product.exp_date}}</td>
+				<td class="pointer">{{product.price}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

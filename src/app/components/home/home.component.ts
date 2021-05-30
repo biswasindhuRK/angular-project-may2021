@@ -15,11 +15,12 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) {
     // Detect route changes for active sidebar menu
     this.router.events.subscribe((val: any) => {
-      this.routeChanged(val);
+      // this.routeChanged(val);
     })
   }
 
   routeChanged(val:any) {
+    console.error(`BM:::: ${val}`)
     this.active = val.url;
   }
 

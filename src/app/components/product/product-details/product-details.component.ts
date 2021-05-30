@@ -29,5 +29,8 @@ export class ProductDetailsComponent implements OnInit {
   // Edit Product Details
   editProductDetails(_pid: string) {
     this.productDetails = this._productService.getSpecificProductDetails(_pid).data;
+    if (!Object.keys(this.productDetails).length) {
+      alert('invalid product id');
+    }
   }
 }
